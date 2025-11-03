@@ -32,7 +32,9 @@ dotfiles/
 ## Author
 
 Kuro (Vũ Đức Tuấn)
+
 GitHub: [https://github.com/kurovu146](https://github.com/kurovu146)
+
 Email: kurobakaito146@gmail.com
 
 ---
