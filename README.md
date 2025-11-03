@@ -27,6 +27,8 @@ dotfiles/
 ├── wezterm/            # wezterm.lua
 ├── zsh/                # .zshrc, zsh plugins, aliases
 └── README.md           # this file
+```
+
 ## Author
 
 Kuro (Vũ Đức Tuấn)
@@ -38,5 +40,3 @@ Email: kurobakaito146@gmail.com
 ## License
 
 MIT License © 2025 Kuro
-
-```
