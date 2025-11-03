@@ -1,0 +1,6 @@
+# Ignore tất cả thư mục trong .config
+nvim/.config/*
+
+# Giữ lại thư mục nvim
+!nvim/.config/nvim/
+!nvim/.config/nvim/**
