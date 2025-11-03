@@ -1,56 +1,29 @@
 return {
   {
-    "Mofiqul/vscode.nvim",
+    "folke/tokyonight.nvim",
     lazy = false,
-    priority = 1000,
-    config = function()
-      local c = require("vscode.colors")
+    priority = 1001,
+    opts = {
+      style = "night",
+      transparent = true,
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = true },
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+      on_highlights = function(hl, c)
+        -- 🎨 Làm vạch chia sáng rõ hơn
+        hl.VertSplit = { fg = c.border_highlight or c.blue, bg = "NONE" }
+        hl.WinSeparator = { fg = c.blue, bg = "NONE" }
 
-      require("vscode").setup({
-        -- ⚙️ Tùy chọn chính
-        transparent = true, -- 🔥 Bật nền trong suốt
-        italic_comments = true,
-        disable_nvimtree_bg = true, -- giúp NvimTree cũng trong suốt
-
-        -- 🎨 Nếu muốn tuỳ chỉnh thêm màu:
-        color_overrides = {
-          vscLineNumber = "#666666",
-        },
-        group_overrides = {
-          -- Xóa background của các vùng hay bị tối màu
-          Normal = { bg = "NONE", fg = c.vscFront },
-          NormalFloat = { bg = "NONE" },
-          FloatBorder = { bg = "NONE" },
-          SignColumn = { bg = "NONE" },
-          StatusLine = { bg = "NONE" },
-          VertSplit = { bg = "NONE" },
-          NvimTreeNormal = { bg = "NONE" },
-          CursorLine = { bg = "NONE" },
-        },
-      })
-
-      -- 🌙 Áp dụng theme
-      require("vscode").load("dark")
-
-      -- 🧼 Bảo đảm mọi vùng khác cũng trong suốt tuyệt đối
-      local groups = {
-        "Normal",
-        "NormalNC",
-        "NormalFloat",
-        "SignColumn",
-        "LineNr",
-        "CursorLineNr",
-        "EndOfBuffer",
-        "StatusLine",
-        "StatusLineNC",
-        "VertSplit",
-        "TabLine",
-        "TabLineFill",
-        "TabLineSel",
-      }
-      for _, group in ipairs(groups) do
-        vim.api.nvim_set_hl(0, group, { bg = "none" })
-      end
+        -- 🪵 Làm border của Neo-tree rõ hơn
+        hl.NeoTreeWinSeparator = { fg = c.blue, bg = "NONE" }
+      end,
+    },
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd([[colorscheme tokyonight]])
     end,
   },
 }
