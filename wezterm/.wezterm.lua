@@ -111,6 +111,7 @@ local keys = {
 if is_windows then
 	-- Many Windows users expect Ctrl+Shift+C/V for copy/paste; already set above.
 	-- Add quick launcher to open new WSL shell if available:
+	config.default_domain = "WSL:Ubuntu-24.04"
 	table.insert(keys, {
 		key = "w",
 		mods = "CTRL|ALT",
