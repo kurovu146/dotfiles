@@ -38,9 +38,9 @@ local function compact(tbl)
 	return out
 end
 
-config.color_scheme = "Tokyonight" -- đổi theo ý bạn
+config.color_scheme = "Tokyo Night" -- đổi theo ý bạn
 config.font = wezterm.font_with_fallback(compact(font_fallback))
-config.font_size = 14.0
+config.font_size = 13.0
 config.initial_cols = 120
 config.initial_rows = 30
 
