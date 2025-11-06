@@ -10,4 +10,4 @@ keymap.set("n", "+", "<C-a>", { desc = "Increment" })
 keymap.set("n", "-", "<C-x>", { desc = "Decrement" })
 
 -- Select all
-keymap.set("n", "<C-a>", "ggVG", { desc = "Select All" })
+keymap.set("n", "<C-a>", "gg<S-v><S-g>", { desc = "Select All" })
