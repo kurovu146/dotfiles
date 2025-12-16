@@ -8,7 +8,7 @@ return {
           [[
 From the current staged git diff:
 Generate ONE concise Conventional Commit message.
-Max 72 characters.
+Max 146 characters.
 Focus on WHAT and WHY.
 No markdown, no quotes.
       ]],
