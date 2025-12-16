@@ -7,7 +7,7 @@ return {
         require("CopilotChat").ask(
           [[
 From the current staged git diff:
-Generate ONE concise Conventional Commit message.
+Generate summary concise Conventional Commit message.
 Max 146 characters.
 Focus on WHAT and WHY.
 No markdown, no quotes.
